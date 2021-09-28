@@ -1,6 +1,6 @@
 <template>
-  <div class="main">
-    <HeadBar />
+  <HeadBar />
+  <div class="container">
     <div class="row">
       <router-link to="/projet" class="project">
         <div class="folder">
@@ -20,35 +20,27 @@
         <div class="head">A propos</div>
       </div>
     </div>
-    <Navbar />
   </div>
+  <Navbar />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import HeadBar from "@/components/HeadBar.vue";
 import Navbar from "@/components/Navbar.vue";
+import HeadBar from "@/components/HeadBar.vue";
 import { Icon } from "@iconify/vue";
 
 @Options({
   components: {
-    HeadBar,
     Navbar,
+    HeadBar,
     Icon,
   },
 })
 export default class Home extends Vue {}
 </script>
 <style lang="scss" scoped>
-.main {
-  background: url("../assets/wallpaper.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: 92%;
-  min-height: 100vh;
-  @media screen and (min-width: 1280px) {
-    background-position-x: 0;
-  }
+.container {
   .row {
     width: 100%;
     padding-top: 10px;

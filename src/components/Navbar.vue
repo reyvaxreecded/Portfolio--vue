@@ -4,9 +4,9 @@
       <a class="phone" href="tel:+330629386865">
         <Icon icon="carbon:phone-filled" color="white" height="80%" />
       </a>
-      <a class="mail">
+      <router-link to="/contact" class="mail">
         <Icon icon="uiw:mail" color="white" height="80%" />
-      </a>
+      </router-link>
       <a class="github" href="https://github.com/reyvaxreecded">
         <Icon icon="akar-icons:github-fill" color="white" height="80%" />
       </a>
@@ -56,7 +56,7 @@ export default class Navbar extends Vue {}
     justify-content: space-around;
     align-items: center;
     width: 90%;
-    a {
+    a, router-link {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -91,13 +91,13 @@ export default class Navbar extends Vue {}
   @media screen and (min-width: 360px) {
     min-height: 12.5%;
     border-radius: 20px;
-    a {
+    a, router-link {
       height: 60px !important;
       width: 60px !important;
     }
   }
   @media screen and (min-width: 390px) and (min-height: 780px) {
-    a {
+    a, router-link {
       height: 70px !important;
       width: 70px !important;
     }
@@ -106,7 +106,7 @@ export default class Navbar extends Vue {}
     width: 60%;
     left: 20%;
     right: 20%;
-    a {
+    a, router-link {
       width: 80px !important;
       height: 80px !important;
     }
@@ -124,7 +124,7 @@ export default class Navbar extends Vue {}
     right: 27.5%;
     .nav--list {
       width: 98%;
-      a {
+      a, router-link {
         height: 60px !important;
         width: 60px !important;
         cursor: pointer;

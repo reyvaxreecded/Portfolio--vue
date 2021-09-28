@@ -1,6 +1,6 @@
 <template>
-  <div class="main">
-    <HeadBar />
+  <HeadBar />
+  <div class="container">
     <router-link to="/" class="folder">
       <div class="head">Projets</div>
       <div class="project--list">
@@ -19,23 +19,19 @@
   </div>
 </template>
 <script>
-import HeadBar from "@/components/HeadBar.vue";
 import { Options, Vue } from "vue-class-component";
+import HeadBar from "@/components/HeadBar.vue";
 
 @Options({
   components: {
     HeadBar,
-  },
+  }
 })
+
 export default class Folder extends Vue {}
 </script>
 <style lang="scss" scoped>
-.main {
-  background: url("../assets/wallpaper.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: 92%;
-  min-height: 100vh;  
+.container {
   .folder {
     display: flex;
     flex-direction: column;
