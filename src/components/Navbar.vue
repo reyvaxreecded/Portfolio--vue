@@ -10,9 +10,9 @@
       <a class="github" href="https://github.com/reyvaxreecded">
         <Icon icon="akar-icons:github-fill" color="white" height="80%" />
       </a>
-      <a class="appstore">
+      <router-link to="/competences/all" class="appstore">
         <Icon icon="simple-icons:appstore" color="white" height="80%" />
-      </a>
+      </router-link>
       <a class="about-us"></a>
       <a
         class="linkedin"

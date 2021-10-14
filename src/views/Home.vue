@@ -10,9 +10,9 @@
         <div class="head">Projets</div>
       </router-link>
       <div class="skills">
-        <a class="app">
+        <router-link to="/competences/all" class="app">
           <Icon icon="simple-icons:appstore" color="white" height="90%" />
-        </a>
+        </router-link>
         <div class="head">Compétences</div>
       </div>
       <div class="about">

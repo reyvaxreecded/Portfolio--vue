@@ -1,0 +1,7 @@
+type Skill @model {
+  id: ID!
+  name: String!
+  categorie: String!
+  logo: String!
+  link: String
+}
