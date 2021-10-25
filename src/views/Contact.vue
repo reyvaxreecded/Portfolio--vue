@@ -51,7 +51,7 @@
 import { Options, Vue } from "vue-class-component";
 import { Icon } from "@iconify/vue";
 import HeadBar from "@/components/HeadBar.vue";
-import Navbar from '@/components/Navbar.vue'
+import Navbar from "@/components/Navbar.vue";
 
 @Options({
   components: {
@@ -63,8 +63,8 @@ import Navbar from '@/components/Navbar.vue'
 export default class Contact extends Vue {}
 </script>
 <style lang="scss" scoped>
-.navbar{
-    display: none;
+.navbar {
+  display: none;
 }
 .container {
   background-color: #111 !important;
@@ -158,12 +158,12 @@ export default class Contact extends Vue {}
     width: 50%;
     min-height: 400px !important;
     margin: auto;
-    margin-top: calc(5%);
+    margin-top: 5%;
     background-color: rgba(255, 255, 255, 0) !important;
     .top-nav {
       width: 100%;
       background: #f4f2f2;
-      filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+      border-bottom: 1px solid #d6d6d5;
       border-radius: 15px 15px 0px 0px;
       display: grid;
       grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.7fr;

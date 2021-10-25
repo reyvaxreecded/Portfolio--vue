@@ -15,10 +15,10 @@
         </router-link>
         <div class="head">Compétences</div>
       </div>
-      <div class="about">
+      <router-link to="/about" class="about">
         <div class="app"></div>
         <div class="head">A propos</div>
-      </div>
+      </router-link>
     </div>
   </div>
   <Navbar />
@@ -111,6 +111,7 @@ export default class Home extends Vue {}
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-decoration: none;
       .app {
         height: 50px;
         width: 50px;

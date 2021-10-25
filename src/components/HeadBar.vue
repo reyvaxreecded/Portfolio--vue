@@ -52,7 +52,7 @@ export default class HeadBar extends Vue {
 
 <style lang="scss">
 .nav {
-  background: rgba(0, 0, 0, 0.02);
+  background: rgba(0, 0, 0, 0);
   color: #fff;
   font-family: "Helvetica";
   display: grid;

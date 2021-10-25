@@ -26,7 +26,8 @@ export default class App extends Vue {}
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 98%;
-  min-height: 100vh;
+  height: 100vh;
+  overflow-y: hidden;
 }
 /* Media Queries */
 

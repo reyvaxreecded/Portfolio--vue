@@ -13,7 +13,7 @@
       <router-link to="/competences/all" class="appstore">
         <Icon icon="simple-icons:appstore" color="white" height="80%" />
       </router-link>
-      <a class="about-us"></a>
+      <router-link to="/about" class="about-us"></router-link>
       <a
         class="linkedin"
         href="https://www.linkedin.com/in/xavier-deredec-58bb75113/"
@@ -56,7 +56,8 @@ export default class Navbar extends Vue {}
     justify-content: space-around;
     align-items: center;
     width: 90%;
-    a, router-link {
+    a,
+    router-link {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -86,18 +87,21 @@ export default class Navbar extends Vue {}
     .about-us,
     .djkiwixx {
       display: none !important;
+      text-decoration: none;
     }
   }
   @media screen and (min-width: 360px) {
     min-height: 12.5%;
     border-radius: 20px;
-    a, router-link {
+    a,
+    router-link {
       height: 60px !important;
       width: 60px !important;
     }
   }
   @media screen and (min-width: 390px) and (min-height: 780px) {
-    a, router-link {
+    a,
+    router-link {
       height: 70px !important;
       width: 70px !important;
     }
@@ -106,7 +110,8 @@ export default class Navbar extends Vue {}
     width: 60%;
     left: 20%;
     right: 20%;
-    a, router-link {
+    a,
+    router-link {
       width: 80px !important;
       height: 80px !important;
     }
@@ -124,7 +129,8 @@ export default class Navbar extends Vue {}
     right: 27.5%;
     .nav--list {
       width: 98%;
-      a, router-link {
+      a,
+      router-link {
         height: 60px !important;
         width: 60px !important;
         cursor: pointer;
@@ -161,11 +167,11 @@ export default class Navbar extends Vue {}
       }
     }
   }
-  @media screen and (min-width:1368px) {
-      width: 30%;
-      left: 35%;
-      right: 35%;
-      min-height: 9%;
+  @media screen and (min-width: 1368px) {
+    width: 30%;
+    left: 35%;
+    right: 35%;
+    min-height: 9%;
   }
 }
 </style>
