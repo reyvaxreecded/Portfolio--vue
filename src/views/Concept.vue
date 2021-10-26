@@ -24,7 +24,7 @@
       <div class="grid">
         <Icon icon="oi:grid-three-up" color="#656564" />
       </div>
-      <div class="nav--title">Mes informations</div>
+      <div class="nav--title">Concept</div>
       <div class="nav--search">
         <input type="search" placeholder="     Rechercher" />
       </div>
@@ -39,31 +39,27 @@
         />
         <a>retour</a>
       </router-link>
-      <a id="name">Mes informations</a>
+      <a id="name">Concept</a>
     </div>
     <div class="content">
-      <img src="../assets/profile.png" alt="" srcset="" />
-      <p>
-        Je m'apelle Xavier Deredec, je suis un jeune développeur web passionné
-        de nouvelles technologies.
-      </p>
-      <div class="contact-infos">
-        <h2>Coordonnées</h2>
-        <div class="contact-infos--link">
-          <a href="mailto:xavier.deredec@live.fr">xavier.deredec@live.fr</a>
-        </div>
-        <a
-          href="https://www.malt.fr/profile/xavierderedec"
-          class="contact-infos--link"
-        >
-          <div class="logo"></div>
-          <div class="legend">Malt</div>
-        </a>
-        <router-link to="/contact" class="contact-infos--link">
-          <div class="logo"></div>
-          <div class="legend">Formulaire de contact</div>
-        </router-link>
+      <div class="top-section">
+        <Icon icon="clarity:devices-solid" class="branding-logo" />
+        <a class="label">DevOS</a>
+        <a class="version">Version 1.0.0</a>
       </div>
+      <p>
+        L’idée de ce portfolio se base sur deux bonnes pratiques de dévelopement
+        :<br />
+        <u>Le Mobile First et le responsive design</u><br />
+        Suite à cela je suis partie d’un postulat, l’interface des systémes
+        d’exploitation est la mieux conçue pour s’adapter à la fois aux formats
+        mobile, tablette et desktop . J’ai donc conçu ce portfolio en
+        m’inspirant des systéme d’exploitation Apple afin que celui ressemble
+        respectivement à un iphone pour les smartphone, un ipad pour les
+        tablettes et un mac pour les desktop . Cette version n’en est qu’a son
+        balbutiement n’hésitez pas à revenir réguliérement afin de ne pas
+        manquer les futures features.
+      </p>
     </div>
     <router-link to="/" class="home"><div class="bar"></div></router-link>
   </div>
@@ -71,9 +67,9 @@
 </template>
 <script>
 import { Vue, Options } from "vue-class-component";
-import { Icon } from "@iconify/vue";
 import HeadBar from "@/components/HeadBar.vue";
 import Navbar from "@/components/Navbar.vue";
+import { Icon } from "@iconify/vue";
 
 @Options({
   components: {
@@ -82,15 +78,18 @@ import Navbar from "@/components/Navbar.vue";
     Icon,
   },
 })
-export default class AboutMe extends Vue {}
+export default class Concept extends Vue {}
 </script>
 <style lang="scss" scoped>
-.headbar {
-  background: rgba(38, 38, 38, 0.5);
-  backdrop-filter: blur(150px);
+.top-nav {
+  display: none;
 }
 .navbar {
   display: none;
+}
+.headbar {
+  background: rgba(38, 38, 38, 0.5);
+  backdrop-filter: blur(150px);
 }
 .container {
   height: calc(100vh - 40px);
@@ -109,10 +108,10 @@ export default class AboutMe extends Vue {}
       color: #fff;
       font-weight: 600;
       padding-left: 10px;
-      font-size: 1em;
+      font-size: 1.25em;
       margin-top: 1%;
       text-align: center;
-      margin-left: 0.5%;
+      margin-left: 5%;
     }
     .back--link {
       display: flex;
@@ -123,6 +122,38 @@ export default class AboutMe extends Vue {}
         color: #196deb;
         font-size: 1.5em;
       }
+    }
+  }
+  .content {
+    padding-bottom: 50px;
+    .top-section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      .branding-logo {
+        width: 100px;
+        height: 100px;
+        color: #fff;
+      }
+      .label,
+      .version {
+        font-family: "Helvetica";
+        color: #fff;
+      }
+      .label {
+        font-size: 1.5em;
+      }
+    }
+    p {
+      padding-top: 20px;
+      width: 90%;
+      text-align: center;
+      color: #fff;
+      font-family: "Helvetica";
+      margin: auto;
+      font-size: 0.85em;
     }
   }
   .home > .bar {
@@ -136,98 +167,41 @@ export default class AboutMe extends Vue {}
     left: 15%;
     right: 15%;
   }
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 50px;
-    p {
-      color: #fff;
-      font-family: "Helvetica";
-      text-align: center;
-      width: 90%;
-    }
-    .contact-infos {
-      width: 95%;
-      h2 {
-        font-family: "Helvetica";
-        color: #fff;
-      }
-      &--link {
-        width: calc(100% - 20px);
-        height: 50px;
-        padding-left: 10px;
-        padding-right: 10px;
-        background: #323232;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        &:nth-child(2) {
-          border-radius: 20px 20px 0 0;
-        }
-        &:nth-child(3) {
-          .logo {
-            background: url("../assets/malt__logo.png");
-            background-size: cover;
-          }
-        }
-        &:nth-child(4) {
-          border-radius: 0 0 20px 20px;
-          .logo {
-            background: url("../assets/Mail__logo.png");
-            background-size: cover;
-          }
-        }
-        a,
-        .legend {
-          color: #fff;
-          font-family: "Helvetica";
-        }
-        .logo {
-          width: 35px;
-          height: 35px;
-          border-radius: 10px;
-          margin-right: 10px;
-        }
-      }
-    }
+}
+@media screen and (min-width: 360px) {
+  .container > .title > #name {
+    margin-left: 10%;
+  }
+}
+@media screen and (min-width: 390px) {
+  .container > .title > #name {
+    margin-left: 12.5%;
+  }
+}
+@media screen and (min-width: 410px) {
+  .container > .title > #name {
+    margin-left: 15%;
   }
 }
 @media screen and (min-width: 768px) {
   .container > .title > #name {
-    margin-left: 23.5%;
-    font-size: 1.5em;
-  }
-  .container > .content > img {
-    width: 250px;
-    height: 250px;
-  }
-  .container > .content > p {
-    font-size: 1.25em;
-  }
-  .container > .content > .contact-infos > h2 {
+    margin-left: 27.5%;
     font-size: 2em;
   }
-  .container > .content > .contact-infos > .contact-infos--link {
-    height: 75px;
-    .logo {
-      width: 50px;
-      height: 50px;
+  .container > .content {
+    .top-section > .branding-logo {
+      width: 200px;
+      height: 200px;
     }
-    a,
-    .legend {
-      font-size: 1.25em;
+    .top-section > .label {
+      font-size: 2.5em;
     }
-  }
-}
-@media screen and (min-width: 800px) {
-  .container > .title > #name {
-    margin-left: 25%;
-  }
-}
-@media screen and (min-width: 880px) {
-  .container > .title > #name {
-    margin-left: 26.5%;
+    .top-section > .version {
+      font-size: 1.75em;
+    }
+    p {
+      font-size: 1.5em;
+    }
   }
 }
 @media screen and (min-width: 1280px) {
@@ -256,7 +230,7 @@ export default class AboutMe extends Vue {}
       border-bottom: 1px solid #d6d6d5;
       border-radius: 15px 15px 0px 0px;
       display: grid;
-      grid-template-columns: 0.25fr 0.25fr 0.25fr 0.35fr 0.35fr 0.35fr 2fr 2fr 2.25fr;
+      grid-template-columns: 0.25fr 0.25fr 0.25fr 0.35fr 0.35fr 0.35fr 1fr 4fr 2.25fr;
       grid-template-rows: 50px;
       place-items: center;
       padding-left: 25px;
@@ -323,9 +297,12 @@ export default class AboutMe extends Vue {}
       border-top: 1px solid #e0e0df;
       background: #ededec;
       border-radius: 0 0 20px 20px;
-      img {
-        width: 150px;
-        height: 150px;
+      .top-section {
+        .branding-logo,
+        .label,
+        .version {
+          color: #111;
+        }
       }
       p {
         font-size: 1em;
@@ -333,33 +310,10 @@ export default class AboutMe extends Vue {}
       }
     }
   }
-  .container > .content > .contact-infos > h2 {
-    font-size: 1.5em;
-    color: #111;
-  }
-  .container > .content > .contact-infos > .contact-infos--link {
-    height: 60px;
-    background: #e5e5e4;
-    &:hover {
-      background: #adadad;
-    }
-    .logo {
-      width: 40px;
-      height: 40px;
-    }
-    a,
-    .legend {
-      font-size: 1em;
-      color: #111;
-    }
-  }
 }
 @media screen and (min-width: 1368px) {
   .container {
     width: 60%;
-    .top-nav {
-      grid-template-columns: 0.25fr 0.25fr 0.25fr 0.35fr 0.35fr 0.35fr 2fr 3fr 2.25fr;
-    }
   }
 }
 </style>

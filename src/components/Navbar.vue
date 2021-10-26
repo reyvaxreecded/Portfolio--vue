@@ -134,9 +134,9 @@ export default class Navbar extends Vue {}
         height: 60px !important;
         width: 60px !important;
         cursor: pointer;
-        transition-duration: 0.1s;
+        transition-duration: 0.075s;
         &:hover {
-          transition-duration: 0.1s;
+          transition-duration: 0.075s;
           transform: scale(1.5);
         }
       }

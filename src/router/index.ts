@@ -6,6 +6,9 @@ import Contact from '../views/Contact.vue'
 import Appstore from '../views/Appstore.vue'
 import About from '../views/About.vue'
 import AboutMe from '../views/AboutMe.vue'
+import Concept from '../views/Concept.vue'
+import Mockup from '../views/Mockup.vue'
+import Devlopement from '../views/Devlopement.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -37,6 +40,21 @@ const routes: Array<RouteRecordRaw> = [
     path: '/aboutme',
     name: 'AboutMe',
     component: AboutMe
+  },
+  {
+    path: '/concept',
+    name: 'Concept',
+    component: Concept
+  },
+  {
+    path: '/mockup',
+    name: 'Mockup',
+    component: Mockup
+  },
+  {
+    path: '/devlopement',
+    name: 'Devlopement',
+    component: Devlopement
   }
 ]
 

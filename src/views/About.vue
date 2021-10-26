@@ -56,7 +56,7 @@
       </router-link>
       <div class="menu">
         <div class="menu--list">
-          <router-link to="/about" class="menu--link">
+          <router-link to="/concept" class="menu--link">
             <div class="logo">
               <Icon
                 icon="carbon:idea"
@@ -75,7 +75,7 @@
               class="arrow"
             />
           </router-link>
-          <router-link to="/about" class="menu--link">
+          <router-link to="/mockup" class="menu--link">
             <div class="logo">
               <Icon
                 icon="uiw:appstore-o"
@@ -94,7 +94,7 @@
               class="arrow"
             />
           </router-link>
-          <router-link to="/about" class="menu--link">
+          <router-link to="/devlopement" class="menu--link">
             <div class="logo">
               <Icon
                 icon="ic:twotone-developer-mode"
@@ -283,6 +283,9 @@ export default class About extends Vue {}
   .home {
     display: none;
   }
+  .headbar {
+    background: rgba(255, 255, 255, 0.25);
+  }
   .container {
     width: 70%;
     min-height: 400px !important;
@@ -382,6 +385,7 @@ export default class About extends Vue {}
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          text-decoration: none;
           margin-right: 5%;
           width: 75px;
           height: 75px;
